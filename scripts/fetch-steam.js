@@ -26,22 +26,22 @@ async function fetchSteamData() {
       scoreRank: raw.score_rank
     }
 
-    // 确保目录存在
+    // Ensure directory exists
     await fs.mkdir('./public/data', { recursive: true })
 
-    // 写入文件
+    // Write file
     await fs.writeFile(OUTPUT_PATH, JSON.stringify(data, null, 2))
 
-    console.log('✅ Steam 数据已保存到', OUTPUT_PATH)
-    console.log('📊 数据摘要:')
-    console.log(`   - 游戏名: ${data.name}`)
-    console.log(`   - 好评: ${data.positive}`)
-    console.log(`   - 差评: ${data.negative}`)
-    console.log(`   - 好评率: ${((data.positive / (data.positive + data.negative)) * 100).toFixed(1)}%`)
-    console.log(`   - 预估销量: ${data.owners}`)
+    console.log('✅ Steam data saved to', OUTPUT_PATH)
+    console.log('📊 Data summary:')
+    console.log(`   - Game name: ${data.name}`)
+    console.log(`   - Positive: ${data.positive}`)
+    console.log(`   - Negative: ${data.negative}`)
+    console.log(`   - Positive rate: ${((data.positive / (data.positive + data.negative)) * 100).toFixed(1)}%`)
+    console.log(`   - Estimated owners: ${data.owners}`)
 
   } catch (error) {
-    console.error('❌ 拉取Steam数据失败:', error.message)
+    console.error('❌ Failed to fetch Steam data:', error.message)
     process.exit(1)
   }
 }

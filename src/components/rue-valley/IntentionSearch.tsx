@@ -76,8 +76,8 @@ export function IntentionSearch() {
     const text = `【${intention.intention}】
 Loop: ${intention.loop}
 NPC: ${intention.npc}
-前置条件: ${intention.prerequisite}
-奖励: ${intention.reward}`
+Prerequisite: ${intention.prerequisite}
+Reward: ${intention.reward}`
 
     navigator.clipboard.writeText(text).then(() => {
       setCopiedIndex(index)
@@ -97,8 +97,8 @@ NPC: ${intention.npc}
 
   return (
     <section className="mb-16">
-      <h2 className="text-3xl font-bold text-center text-white mb-4">意向树快速查询器</h2>
-      <p className="text-center text-gray-300 mb-8">输入关键词，一秒定位任务线！</p>
+      <h2 className="text-3xl font-bold text-center text-white mb-4">Intention Tree Quick Search</h2>
+      <p className="text-center text-gray-300 mb-8">Enter keywords to instantly locate quest lines!</p>
 
       <div className="bg-gradient-to-br from-[#1C162D] to-[#0D0A16] rounded-lg p-8 border border-gray-700">
         {/* Search Controls */}
@@ -109,7 +109,7 @@ NPC: ${intention.npc}
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input
                 type="text"
-                placeholder="搜索意向、NPC、奖励..."
+                placeholder="Search intentions, NPCs, rewards..."
                 value={searchText}
                 onChange={(e) => setSearchText(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#25AB2B] focus:border-transparent"
@@ -124,7 +124,7 @@ NPC: ${intention.npc}
               onChange={(e) => setSelectedNPC(e.target.value)}
               className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#25AB2B] focus:border-transparent"
             >
-              <option value="all">全部 NPC</option>
+              <option value="all">All NPCs</option>
               {uniqueNPCs.map((npc) => (
                 <option key={npc} value={npc}>
                   {npc}
@@ -140,7 +140,7 @@ NPC: ${intention.npc}
               onChange={(e) => setSelectedLoop(e.target.value)}
               className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#25AB2B] focus:border-transparent"
             >
-              <option value="all">全部循环</option>
+              <option value="all">All Loops</option>
               {uniqueLoops.map((loop) => (
                 <option key={loop} value={loop}>
                   Loop {loop}
@@ -153,7 +153,7 @@ NPC: ${intention.npc}
         {/* Results Count */}
         <div className="mb-4">
           <p className="text-sm text-gray-400">
-            找到 {searchResults.length} 条意向任务
+            Found {searchResults.length} intention tasks
           </p>
         </div>
 
@@ -161,8 +161,8 @@ NPC: ${intention.npc}
         <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2">
           {searchResults.length === 0 ? (
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-gray-700 text-center">
-              <p className="text-gray-400">未找到匹配的意向任务</p>
-              <p className="text-sm text-gray-500 mt-2">尝试使用不同的关键词或筛选条件</p>
+              <p className="text-gray-400">No matching intention tasks found</p>
+              <p className="text-sm text-gray-500 mt-2">Try different keywords or filter criteria</p>
             </div>
           ) : (
             searchResults.map((intention, index) => (
@@ -189,7 +189,7 @@ NPC: ${intention.npc}
                   <button
                     onClick={() => copyToClipboard(intention, index)}
                     className="ml-4 p-2 bg-gray-700 hover:bg-[#25AB2B] rounded-lg transition-colors"
-                    title="复制攻略"
+                    title="Copy guide"
                   >
                     {copiedIndex === index ? (
                       <Check className="w-5 h-5 text-white" />
@@ -201,12 +201,12 @@ NPC: ${intention.npc}
 
                 <div className="space-y-2 text-sm">
                   <div>
-                    <span className="text-gray-400 font-medium">前置条件：</span>
-                    <span className="text-gray-300">{intention.prerequisite}</span>
+                    <span className="text-gray-400 font-medium">Prerequisite:</span>
+                    <span className="text-gray-300"> {intention.prerequisite}</span>
                   </div>
                   <div>
-                    <span className="text-gray-400 font-medium">奖励：</span>
-                    <span className="text-[#25AB2B]">{intention.reward}</span>
+                    <span className="text-gray-400 font-medium">Reward:</span>
+                    <span className="text-[#25AB2B]"> {intention.reward}</span>
                   </div>
                 </div>
               </div>

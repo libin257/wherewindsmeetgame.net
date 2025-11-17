@@ -68,14 +68,24 @@ export default async function ContentPage({ params }: PageProps) {
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-400 mb-6">
           <Link href="/" className="hover:text-[#25AB2B]">Home</Link>
-          {slug.map((segment, index) => (
-            <span key={index}>
-              {' › '}
-              <span className={index === slug.length - 1 ? 'text-white' : ''}>
-                {segment.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+          {slug.map((segment, index) => {
+            const isLast = index === slug.length - 1
+            const segmentPath = '/' + slug.slice(0, index + 1).join('/')
+            const displayText = segment.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+
+            return (
+              <span key={index}>
+                {' › '}
+                {isLast ? (
+                  <span className="text-white">{displayText}</span>
+                ) : (
+                  <Link href={segmentPath} className="hover:text-[#25AB2B]">
+                    {displayText}
+                  </Link>
+                )}
               </span>
-            </span>
-          ))}
+            )
+          })}
         </nav>
 
         {/* Article Header */}

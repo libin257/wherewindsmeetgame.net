@@ -60,7 +60,7 @@ export function Header() {
             href="/guide/gameplay-overview"
             className="bg-[#25AB2B] hover:bg-[#1E8923] text-black font-semibold py-2 px-4 rounded-lg transition-colors"
           >
-            开始上手
+            Get Started
           </Link>
         </div>
       </div>

@@ -44,7 +44,7 @@ export function Footer() {
               <li><Link href="/terms" className="text-base">Terms of Service</Link></li>
             </ul>
             <p className="mt-6 text-xs text-gray-400">
-              引自 PC Gamer: "A haunting time loop experience"
+              Quote from PC Gamer: "A haunting time loop experience"
             </p>
           </div>
         </div>

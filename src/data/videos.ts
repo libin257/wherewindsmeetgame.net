@@ -10,20 +10,20 @@ export interface Video {
 export const featuredVideos: Video[] = [
   {
     id: 'ydirmet86Uk',
-    title: '官方玩法预告片',
-    description: '官方 2 分钟预告，速览玩法要素',
+    title: 'Official Gameplay Trailer',
+    description: 'Official 2-minute trailer showcasing key gameplay elements',
     thumbnail: 'https://img.youtube.com/vi/ydirmet86Uk/maxresdefault.jpg'
   },
   {
     id: 'IHOpJyGxSDc',
-    title: '深度评测 (20 min)',
-    description: 'Review Impressions - 媒体深度评测',
+    title: 'In-Depth Review (20 min)',
+    description: 'Comprehensive media review and impressions',
     thumbnail: 'https://img.youtube.com/vi/IHOpJyGxSDc/maxresdefault.jpg'
   },
   {
     id: 'kYxxTWN5N1c',
-    title: '全流程无解说',
-    description: 'Complete Gameplay Walkthrough',
+    title: 'Full Playthrough No Commentary',
+    description: 'Complete gameplay walkthrough',
     thumbnail: 'https://img.youtube.com/vi/kYxxTWN5N1c/maxresdefault.jpg'
   }
 ]

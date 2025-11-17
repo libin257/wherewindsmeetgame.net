@@ -74,17 +74,17 @@ export function SteamGauge() {
 
   // Get review status text
   const getReviewStatus = (rate: number) => {
-    if (totalReviews === 0) return '暂无评价'
-    if (rate >= 95) return '好评如潮'
-    if (rate >= 80) return '特别好评'
-    if (rate >= 70) return '多半好评'
-    if (rate >= 40) return '褒贬不一'
-    return '多半差评'
+    if (totalReviews === 0) return 'No Reviews Yet'
+    if (rate >= 95) return 'Overwhelmingly Positive'
+    if (rate >= 80) return 'Very Positive'
+    if (rate >= 70) return 'Mostly Positive'
+    if (rate >= 40) return 'Mixed'
+    return 'Mostly Negative'
   }
 
   return (
     <section className="mb-16">
-      <h2 className="text-3xl font-bold text-center text-white mb-8">Steam 热度仪表盘</h2>
+      <h2 className="text-3xl font-bold text-center text-white mb-8">Steam Heatmap Dashboard</h2>
 
       <div className="bg-gradient-to-br from-[#1C162D] to-[#0D0A16] rounded-lg p-8 border border-gray-700">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -122,7 +122,7 @@ export function SteamGauge() {
                     <div className="text-3xl font-bold text-gray-400">
                       Coming Soon
                     </div>
-                    <div className="text-sm text-gray-500 mt-2">即将上线</div>
+                    <div className="text-sm text-gray-500 mt-2">Launching Soon</div>
                   </>
                 )}
               </div>
@@ -131,15 +131,15 @@ export function SteamGauge() {
               {hasReviews ? (
                 <>
                   <p className="text-sm text-gray-400">
-                    {steamData.positive.toLocaleString()} 好评 / {steamData.negative.toLocaleString()} 差评
+                    {steamData.positive.toLocaleString()} Positive / {steamData.negative.toLocaleString()} Negative
                   </p>
                   <p className="text-xs text-gray-500 mt-1">
-                    共 {totalReviews.toLocaleString()} 条评价
+                    {totalReviews.toLocaleString()} Total Reviews
                   </p>
                 </>
               ) : (
                 <p className="text-sm text-gray-500">
-                  等待玩家评价中...
+                  Waiting for player reviews...
                 </p>
               )}
             </div>
@@ -148,21 +148,21 @@ export function SteamGauge() {
           {/* Right: Metrics */}
           <div className="space-y-6">
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
-              <h3 className="text-lg font-semibold text-white mb-2">持有玩家</h3>
+              <h3 className="text-lg font-semibold text-white mb-2">Owners</h3>
               <p className="text-3xl font-bold text-[#25AB2B]">{steamData.owners}</p>
-              <p className="text-sm text-gray-400 mt-1">Steam 统计</p>
+              <p className="text-sm text-gray-400 mt-1">Steam Statistics</p>
             </div>
 
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
-              <h3 className="text-lg font-semibold text-white mb-2">当前售价</h3>
+              <h3 className="text-lg font-semibold text-white mb-2">Current Price</h3>
               <p className="text-3xl font-bold text-white">{priceUSD}</p>
-              <p className="text-sm text-gray-400 mt-1">Steam 平台</p>
+              <p className="text-sm text-gray-400 mt-1">Steam Platform</p>
             </div>
 
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
-              <h3 className="text-lg font-semibold text-white mb-2">数据更新</h3>
+              <h3 className="text-lg font-semibold text-white mb-2">Last Updated</h3>
               <p className="text-sm text-gray-300">
-                {new Date(steamData.fetchedAt).toLocaleString('zh-CN', {
+                {new Date(steamData.fetchedAt).toLocaleString('en-US', {
                   year: 'numeric',
                   month: 'long',
                   day: 'numeric',
@@ -170,7 +170,7 @@ export function SteamGauge() {
                   minute: '2-digit'
                 })}
               </p>
-              <p className="text-xs text-gray-500 mt-1">数据来源: SteamSpy</p>
+              <p className="text-xs text-gray-500 mt-1">Data Source: SteamSpy</p>
             </div>
           </div>
         </div>
