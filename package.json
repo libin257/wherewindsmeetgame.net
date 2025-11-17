@@ -9,10 +9,8 @@
     "start": "next start",
     "lint": "bunx tsc --noEmit && next lint",
     "format": "bunx biome format --write",
-    "fetch:steam": "node scripts/fetch-steam.js",
     "csv:json": "node scripts/csv-to-json.js",
-    "generate:mdx": "node scripts/generate-mdx-from-csv.js",
-    "prebuild": "npm run fetch:steam"
+    "generate:mdx": "node scripts/generate-mdx-from-csv.js"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

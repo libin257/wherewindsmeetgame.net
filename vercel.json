@@ -6,7 +6,6 @@
     "NEXT_PUBLIC_GA_ID": "@next_public_ga_id",
     "NEXT_PUBLIC_CLARITY_ID": "@next_public_clarity_id",
     "NEXT_PUBLIC_SITE_URL": "@next_public_site_url",
-    "NEXT_PUBLIC_SITE_NAME": "@next_public_site_name",
-    "NEXT_PUBLIC_STEAM_APP_ID": "@next_public_steam_app_id"
+    "NEXT_PUBLIC_SITE_NAME": "@next_public_site_name"
   }
 }
