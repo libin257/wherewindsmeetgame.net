@@ -12,43 +12,43 @@ export function Header() {
           </Link>
           <nav className="hidden md:flex gap-6">
             <Link
-              href="/guide/gameplay-overview"
+              href="/guide"
               className="text-gray-200 hover:text-[#25AB2B] transition-colors px-3 py-2"
             >
               Guide
             </Link>
             <Link
-              href="/buy/steam-price"
+              href="/buy"
               className="text-gray-200 hover:text-[#25AB2B] transition-colors px-3 py-2"
             >
               Buy
             </Link>
             <Link
-              href="/review/overall"
+              href="/review"
               className="text-gray-200 hover:text-[#25AB2B] transition-colors px-3 py-2"
             >
               Review
             </Link>
             <Link
-              href="/technical/system-requirements"
+              href="/technical"
               className="text-gray-200 hover:text-[#25AB2B] transition-colors px-3 py-2"
             >
               Technical
             </Link>
             <Link
-              href="/community/reddit-highlights"
+              href="/community"
               className="text-gray-200 hover:text-[#25AB2B] transition-colors px-3 py-2"
             >
               Community
             </Link>
             <Link
-              href="/download/save-file-location"
+              href="/download"
               className="text-gray-200 hover:text-[#25AB2B] transition-colors px-3 py-2"
             >
               Download
             </Link>
             <Link
-              href="/info/characters"
+              href="/info"
               className="text-gray-200 hover:text-[#25AB2B] transition-colors px-3 py-2"
             >
               Info
