@@ -63,7 +63,7 @@ export default async function ContentPage({ params }: PageProps) {
   const htmlContent = await marked(content)
 
   // Structured data for SEO
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://winterburrow.info'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://wherewindsmeet.info'
   const articleUrl = `${baseUrl}/${slug.join('/')}`
 
   const structuredData = {
@@ -73,11 +73,11 @@ export default async function ContentPage({ params }: PageProps) {
     description: frontmatter.description || '',
     author: {
       '@type': 'Organization',
-      name: 'Winter Burrow Info Team'
+      name: 'Where Winds Meet Info Team'
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Winter Burrow Info',
+      name: 'Where Winds Meet Info',
       logo: {
         '@type': 'ImageObject',
         url: `${baseUrl}/images/logo.png`

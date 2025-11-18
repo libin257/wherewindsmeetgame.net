@@ -64,10 +64,10 @@ export default async function GuidesPage() {
 
       <div className="flex flex-col justify-between items-center mb-6">
         <h1 className="mx-auto max-w-3xl text-3xl font-bold lg:text-5xl tracking-tight text-white drop-shadow-lg">
-          <span className="pt-10">Winter Burrow Guides</span>
+          <span className="pt-10">Where Winds Meet Guides</span>
         </h1>
         <h2 className="mx-auto max-w-[700px] md:text-xl my-6 text-gray-200 drop-shadow-md">
-          Complete walkthroughs, tips, and strategies for surviving the frozen wilderness
+          Complete walkthroughs, tips, and strategies for mastering the martial arts world
         </h2>
       </div>
 

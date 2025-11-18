@@ -1,0 +1,72 @@
+[
+  {
+    "buildName": "Nameless Sword – Swift DPS",
+    "weapon": "Nameless Sword",
+    "role": "DPS",
+    "votes": 342,
+    "description": "High mobility burst build with armor-shredding combos"
+  },
+  {
+    "buildName": "Panacea Fan – Bleed DoT",
+    "weapon": "Panacea Fan",
+    "role": "DPS",
+    "votes": 297,
+    "description": "Damage over time specialist with crowd control"
+  },
+  {
+    "buildName": "Guqin – Harmony Support",
+    "weapon": "Guqin",
+    "role": "Healer",
+    "votes": 256,
+    "description": "Team support with healing and buffs"
+  },
+  {
+    "buildName": "Spear – Penetrating Strike",
+    "weapon": "Spear",
+    "role": "DPS",
+    "votes": 234,
+    "description": "Long-range poke with high critical damage"
+  },
+  {
+    "buildName": "Dual Blades – Shadow Assassin",
+    "weapon": "Dual Blades",
+    "role": "DPS",
+    "votes": 221,
+    "description": "Fast attack speed with evasion mechanics"
+  },
+  {
+    "buildName": "Bow – Precision Sniper",
+    "weapon": "Bow",
+    "role": "DPS",
+    "votes": 198,
+    "description": "Ranged damage dealer with charged shots"
+  },
+  {
+    "buildName": "Staff – Iron Wall",
+    "weapon": "Staff",
+    "role": "Tank",
+    "votes": 187,
+    "description": "Defensive build with crowd control abilities"
+  },
+  {
+    "buildName": "Saber – Whirlwind Slash",
+    "weapon": "Saber",
+    "role": "DPS",
+    "votes": 176,
+    "description": "AoE damage dealer for group combat"
+  },
+  {
+    "buildName": "Hammer – Ground Breaker",
+    "weapon": "Hammer",
+    "role": "Tank",
+    "votes": 165,
+    "description": "Heavy armor with stun capabilities"
+  },
+  {
+    "buildName": "Whip – Crowd Controller",
+    "weapon": "Whip",
+    "role": "Healer",
+    "votes": 154,
+    "description": "Support build with disable effects"
+  }
+]

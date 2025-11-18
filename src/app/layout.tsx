@@ -18,25 +18,25 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Winter Burrow - Complete Survival Guide & Wiki | Cozy Survival Tips",
-    template: "%s | Winter Burrow Info"
+    default: "Where Winds Meet - Complete Guide & Wiki | Wuxia RPG Tips",
+    template: "%s | Where Winds Meet Info"
   },
-  description: "Master Winter Burrow with our comprehensive guide featuring beginner survival tips, interactive warmth calculator, crafting recipe finder, full walkthrough, and platform reviews. Your ultimate companion for conquering the frozen wilderness.",
+  description: "Master Where Winds Meet with our comprehensive guide featuring character builds, boss strategies, weapon tier lists, PC performance guides, and complete walkthroughs. Your ultimate companion for conquering the martial arts world.",
   keywords: [
-    "Winter Burrow",
-    "Winter Burrow guide",
-    "Winter Burrow wiki",
-    "survival game guide",
-    "warmth calculator",
-    "crafting recipes",
-    "beginner tips",
-    "walkthrough",
+    "Where Winds Meet",
+    "Where Winds Meet guide",
+    "Where Winds Meet wiki",
+    "Wuxia RPG guide",
+    "character builds",
+    "boss strategies",
+    "weapon tier list",
+    "parry guide",
     "game guide"
   ],
-  authors: [{ name: "Winter Burrow Info Team" }],
-  creator: "Winter Burrow Info",
-  publisher: "Winter Burrow Info",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://winterburrow.info'),
+  authors: [{ name: "Where Winds Meet Info Team" }],
+  creator: "Where Winds Meet Info",
+  publisher: "Where Winds Meet Info",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://wherewindsmeet.info'),
   alternates: {
     canonical: '/',
   },
@@ -44,22 +44,22 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: '/',
-    title: 'Winter Burrow - Complete Survival Guide & Wiki',
-    description: 'Master Winter Burrow with our comprehensive guide featuring beginner survival tips, interactive warmth calculator, crafting recipes, and full walkthrough.',
-    siteName: 'Winter Burrow Info',
+    title: 'Where Winds Meet - Complete Wuxia RPG Guide & Wiki',
+    description: 'Master Where Winds Meet with our comprehensive guide featuring character builds, boss strategies, weapon tier lists, and PC performance guides.',
+    siteName: 'Where Winds Meet Info',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Winter Burrow Survival Guide',
+        alt: 'Where Winds Meet Guide',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Winter Burrow - Complete Survival Guide & Wiki',
-    description: 'Master Winter Burrow with beginner tips, warmth calculator, crafting recipes, and full walkthrough.',
+    title: 'Where Winds Meet - Complete Wuxia RPG Guide & Wiki',
+    description: 'Master Where Winds Meet with character builds, boss strategies, weapon tier lists, and performance guides.',
     images: ['/images/og-image.jpg'],
   },
   robots: {

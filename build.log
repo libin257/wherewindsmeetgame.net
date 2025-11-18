@@ -1,0 +1,50 @@
+
+> winter-burrow-info@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.6
+   - Environments: .env.local
+   - Experiments (use with caution):
+     · optimizePackageImports
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 21.5s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/56) ...
+   Generating static pages (14/56) 
+   Generating static pages (28/56) 
+   Generating static pages (42/56) 
+ ✓ Generating static pages (56/56)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                    8.06 kB         114 kB
+├ ○ /_not-found                            992 B         103 kB
+├ ● /[...slug]                             160 B         105 kB
+├   ├ /bosses/emperor's-shadow
+├   ├ /bosses/jiang-yue
+├   ├ /bosses/qianye
+├   └ [+36 more paths]
+├ ○ /bosses                                182 B         105 kB
+├ ○ /builds                                182 B         105 kB
+├ ○ /community                             182 B         105 kB
+├ ○ /guides                                182 B         105 kB
+├ ○ /media                                 182 B         105 kB
+├ ○ /news                                  182 B         105 kB
+├ ○ /pc                                    182 B         105 kB
+├ ○ /robots.txt                            127 B         102 kB
+├ ○ /sitemap.xml                           127 B         102 kB
+├ ○ /store                                 182 B         105 kB
+├ ○ /support                               182 B         105 kB
+└ ○ /system                                182 B         105 kB
++ First Load JS shared by all             102 kB
+  ├ chunks/255-cf2e1d3491ac955b.js       45.7 kB
+  ├ chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB
+  └ other shared chunks (total)          1.92 kB
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+

@@ -1,23 +1,23 @@
-# Winter Burrow Info
+# Where Winds Meet Info
 
-> Your complete survival companion for *Winter Burrow* - Interactive tools, crafting guides, and comprehensive walkthroughs for mastering the frozen wilderness.
+> Your complete Wuxia RPG companion for *Where Winds Meet* - Interactive build tools, boss guides, and comprehensive walkthroughs for mastering the martial arts world.
 
-🌐 **Live Site**: [https://winterburrow.info](https://winterburrow.info)
+🌐 **Live Site**: [https://wherewindsmeet.info](https://wherewindsmeet.info)
 
 ---
 
 ## 📖 About This Project
 
-Winter Burrow Info is a comprehensive fan-made guide website dedicated to helping players survive and thrive in *Winter Burrow*, the cozy survival game. The site features:
+Where Winds Meet Info is a comprehensive fan-made guide website dedicated to helping players master *Where Winds Meet*, the open-world Wuxia action RPG. The site features:
 
-- ✅ **Warmth Calculator** - Interactive tool to calculate exact survival time based on clothing and temperature zones
-- ✅ **Crafting Recipe Finder** - Real-time material-based filtering with station categorization
-- ✅ **Beginner's Guide** - 3-minute quick start survival tips
-- ✅ **Interactive Map** - Resource locations and zone navigation
-- ✅ **Complete Walkthrough** - Full game progression guides
-- ✅ **70+ SEO-optimized pages** - Covering guides, reviews, resources, survival mechanics, and more
-- ✅ **Community Hub** - Curated YouTube videos and Reddit discussions
-- ✅ **Multi-platform Reviews** - Steam, Nintendo Switch, and price tracking
+- ✅ **Build Popularity Rankings** - Real-time community voting data from Fextralife Wiki
+- ✅ **Quick Build Recommender** - 2-step tool to find the perfect build for your playstyle
+- ✅ **Boss Strategy Guides** - Complete guides for all major boss encounters
+- ✅ **Weapon Tier Lists** - Community-approved rankings for all weapon types
+- ✅ **PC Performance Guides** - Optimization tips for smooth 60 FPS gameplay
+- ✅ **78+ SEO-optimized pages** - Covering builds, bosses, guides, news, PC settings, and more
+- ✅ **System Requirements Checker** - Verify if your PC can run the game
+- ✅ **Release Date Countdown** - Global launch time tracker
 
 ---
 
@@ -26,9 +26,8 @@ Winter Burrow Info is a comprehensive fan-made guide website dedicated to helpin
 - **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **Data Visualization**: Warmth matrix heatmap with duration calculations
-- **Search**: Material-based recipe filtering
-- **Video Embeds**: lite-youtube-embed
+- **Interactive Tools**: Build popularity chart & recommendation system
+- **Data Source**: Fextralife Wiki API
 - **Content**: MDX + gray-matter
 - **Deployment**: Vercel
 
@@ -45,8 +44,8 @@ Winter Burrow Info is a comprehensive fan-made guide website dedicated to helpin
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/winterburrow.info.git
-cd winterburrow.info
+git clone https://github.com/yourusername/wherewindsmeet.info.git
+cd wherewindsmeet.info
 
 # Install dependencies
 npm install
@@ -74,50 +73,46 @@ npm run start
 ```
 ├── public/
 │   ├── data/
-│   │   ├── warmth-matrix.json      # Warmth duration data by temperature
-│   │   ├── recipes.json             # Crafting recipes database
-│   │   └── clothing.json            # Clothing items and warmth stats
+│   │   └── build_popularity.json    # Community build voting data
 │   └── images/
 │       ├── backgrounds/             # Site background images
-│       ├── steam/                   # Steam promotional images
-│       └── screenshots/             # Game screenshots
+│       └── hero.png                 # Homepage hero image
 ├── src/
 │   ├── app/
-│   │   ├── page.tsx                 # Homepage with embedded tools
-│   │   ├── warmth-tool/page.tsx     # Full warmth calculator page
-│   │   ├── crafting/page.tsx        # Full recipe finder page
+│   │   ├── page.tsx                 # Homepage with build tools
 │   │   ├── [...slug]/page.tsx       # Dynamic MDX page routes
+│   │   ├── bosses/page.tsx          # Boss list page
+│   │   ├── builds/page.tsx          # Builds list page
+│   │   ├── guides/page.tsx          # Guides list page
+│   │   ├── news/page.tsx            # News list page
+│   │   ├── pc/page.tsx              # PC guides list page
+│   │   ├── system/page.tsx          # System info list page
 │   │   └── sitemap.xml/route.ts     # Dynamic sitemap generator
 │   ├── components/
 │   │   ├── Header.tsx               # Site navigation
 │   │   ├── Footer.tsx               # Site footer
-│   │   ├── warmth/
-│   │   │   └── WarmthCalculator.tsx # Interactive warmth tool
-│   │   └── crafting/
-│   │       └── RecipeFinder.tsx     # Interactive recipe finder
-│   ├── content/                     # 70+ MDX content files
-│   │   ├── guides/                  # Beginner guides and walkthroughs
-│   │   ├── survival/                # Warmth, hunger, stamina mechanics
-│   │   ├── resources/               # Material guides (granite, pinewood, etc.)
-│   │   ├── crafting/                # Crafting guides and tool tutorials
-│   │   ├── reviews/                 # Platform reviews and ratings
-│   │   ├── community/               # Reddit highlights and mods
-│   │   ├── news/                    # Patch notes and updates
-│   │   ├── platforms/               # Steam, Switch platform guides
-│   │   ├── faq/                     # FAQ and troubleshooting
-│   │   └── quests/                  # Quest walkthroughs
-│   └── data/
-│       ├── videos.ts                # YouTube video data
-│       └── reddit.ts                # Reddit post data
+│   │   └── builds/
+│   │       ├── BuildBarChart.tsx    # Build popularity rankings
+│   │       └── BuildPicker.tsx      # Quick build recommender
+│   ├── content/                     # 78+ MDX content files
+│   │   ├── bosses/                  # Boss strategy guides
+│   │   ├── builds/                  # Character build guides
+│   │   ├── guides/                  # Game guides & tutorials
+│   │   ├── news/                    # News & announcements
+│   │   ├── pc/                      # PC performance guides
+│   │   ├── store/                   # Store & editions info
+│   │   ├── support/                 # Support & help
+│   │   ├── system/                  # System requirements
+│   │   ├── media/                   # Media & videos
+│   │   └── community/               # Community resources
 ├── scripts/
-│   ├── fetch-images.cjs             # Image asset fetcher
-│   ├── fetch-youtube.cjs            # YouTube data fetcher
-│   ├── fetch-reddit.cjs             # Reddit data fetcher
-│   ├── test-urls.sh                 # URL accessibility testing
-│   └── generate-articles-from-xlsx.js # Content generation from Excel matrix
+│   ├── create-mdx-files.cjs         # Batch MDX file generator
+│   ├── fetch-builds.cjs             # Fextralife data fetcher
+│   └── test-urls.sh                 # URL accessibility testing
 └── tools/
-    └── demand/                      # Project requirements & design docs
-        └── winter_burrow_content_matrix.xlsx # Content structure definition
+    └── demand/                      # Project requirements & assets
+        ├── test2.md                 # URL structure definition
+        └── hero.png                 # Homepage hero image
 ```
 
 ---
@@ -135,15 +130,7 @@ npm run build                # Build for production
 npm run start                # Start production server
 
 # Data Generation
-npm run fetch:youtube        # Fetch latest YouTube videos
-npm run fetch:reddit         # Fetch Reddit discussions
-npm run fetch:images         # Download game images
-npm run fetch:sheets         # Fetch Google Sheets data
-npm run fetch:all            # Run all data fetchers
-
-# Content Generation
-npm run generate:articles    # Generate MDX pages from Excel matrix
-npm run preview:xlsx         # Preview Excel content structure
+npm run fetch:builds         # Fetch build data from Fextralife
 
 # Testing
 npm run test:urls            # Test all page URLs for accessibility
@@ -153,59 +140,53 @@ npm run test:urls            # Test all page URLs for accessibility
 
 ## 🎨 Key Features
 
-### 1. **Warmth Calculator**
+### 1. **Build Popularity Rankings**
 
-Interactive survival time calculator with:
-- Clothing item selection with warmth values
-- Temperature zone selector (-10°C to 10°C)
-- Real-time duration calculations
-- Complete warmth matrix heatmap
-- Equipment slot tracking (5 slots)
-- Safety threshold indicators
+Interactive visualization showing:
+- Top 8 most popular builds by community votes
+- Role indicators (DPS ⚔️, Tank 🛡️, Healer 💚)
+- Weapon categories with color coding
+- Real-time data from Fextralife Wiki
 
-Uses JSON data with precalculated durations for all temperature/clothing combinations.
+Uses JSON data fetched from the Fextralife API with fallback mock data.
 
-### 2. **Crafting Recipe Finder**
+### 2. **Quick Build Recommender**
 
-Smart material-based filtering with:
-- Material availability selection
-- Crafting station filtering (Handcraft, Workbench, Advanced Workbench, Kitchen)
-- Search by item name
-- Real-time craftable recipe highlighting
-- Missing material indicators
-- Station color coding
+2-step recommendation system:
+- Step 1: Select your weapon
+- Step 2: Choose your playstyle (DPS/Tank/Healer)
+- Instantly get top 3 community-approved builds
+- Detailed descriptions and vote counts
 
 Powered by client-side filtering with instant results.
 
-### 3. **70+ SEO-Optimized Pages**
+### 3. **78+ SEO-Optimized Pages**
 
-Automatically generated and manually curated MDX pages covering:
-- Beginner survival guides
-- Resource gathering locations
-- Crafting system tutorials
-- Warmth and hunger mechanics
-- Quest walkthroughs
-- Platform reviews and pricing
-- Community mods and tools
+Automatically generated MDX pages covering:
+- Character build guides for all weapons
+- Boss strategy guides with weaknesses & drops
+- Comprehensive game guides
+- PC performance optimization
+- System requirements & technical info
+- News & release information
 
 Each page includes:
-- Structured frontmatter (title, description, keywords)
+- Structured frontmatter (title, description, keywords, priority)
 - Responsive layout with dark theme
-- Related article links
+- Breadcrumb navigation
 - SEO metadata and OpenGraph tags
 
 ### 4. **Dynamic Sitemap**
 
-Automatically generates `sitemap.xml` with all 70+ pages, optimized for search engines and updated on every build.
+Automatically generates `sitemap.xml` with all 78+ pages, optimized for search engines and updated on every build.
 
 ---
 
 ## 📊 Data Sources
 
-- **Game Data**: Manual extraction from Winter Burrow gameplay
-- **Community Content**: Curated from Reddit discussions
-- **Video Content**: Official trailers and gameplay videos from YouTube
-- **Steam Images**: Official promotional materials from Steam CDN
+- **Build Data**: Fextralife Wiki API (with fallback mock data)
+- **Game Information**: Official sources and community research
+- **Community Content**: Curated guides and strategies
 
 ---
 
@@ -225,7 +206,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 ## 📝 License
 
-This project is a fan-made resource and is not officially affiliated with the creators of Winter Burrow. All game-related content belongs to its respective owners.
+This project is a fan-made resource and is not officially affiliated with the creators of Where Winds Meet. All game-related content belongs to its respective owners.
 
 The codebase itself is open for community contributions.
 
@@ -233,18 +214,18 @@ The codebase itself is open for community contributions.
 
 ## 🙏 Acknowledgments
 
-- **Winter Burrow Developers** - For creating this cozy survival experience
-- **Reddit Community** - For valuable survival tips and soft-lock solutions
-- **YouTube Creators** - For gameplay videos and tutorials
+- **Where Winds Meet Developers** - For creating this epic Wuxia RPG
+- **Fextralife Wiki** - For community build data and guides
+- **Community Contributors** - For strategies and feedback
 
 ---
 
 ## 🔗 Links
 
-- **Live Site**: [https://winterburrow.info](https://winterburrow.info)
-- **Warmth Calculator**: [https://winterburrow.info/warmth-tool](https://winterburrow.info/warmth-tool)
-- **Crafting Finder**: [https://winterburrow.info/crafting](https://winterburrow.info/crafting)
-- **Beginner Guide**: [https://winterburrow.info/guides/beginner](https://winterburrow.info/guides/beginner)
+- **Live Site**: [https://wherewindsmeet.info](https://wherewindsmeet.info)
+- **Build Tier List**: [https://wherewindsmeet.info/builds/best-builds](https://wherewindsmeet.info/builds/best-builds)
+- **Boss Guides**: [https://wherewindsmeet.info/bosses](https://wherewindsmeet.info/bosses)
+- **Getting Started**: [https://wherewindsmeet.info/guides/class-overview](https://wherewindsmeet.info/guides/class-overview)
 
 ---
 
@@ -256,4 +237,4 @@ For questions, suggestions, or bug reports, please:
 
 ---
 
-*Built with ❤️ for the Winter Burrow community*
+*Built with ❤️ for the Where Winds Meet community*

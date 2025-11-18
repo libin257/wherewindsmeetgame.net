@@ -16,6 +16,7 @@
     "test:urls": "bash scripts/test-urls.sh",
     "fix:paths": "bash scripts/fix-mdx-paths.sh",
     "fix:markdown": "bash scripts/fix-markdown-wrapper.sh",
+    "fetch:builds": "node scripts/fetch-builds.cjs",
     "fetch:images": "node scripts/fetch-images.cjs",
     "fetch:youtube": "node scripts/fetch-youtube.cjs",
     "fetch:reddit": "node scripts/fetch-reddit.cjs",
@@ -23,6 +24,7 @@
     "fetch:all": "bash scripts/build-all-data.sh"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.19",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "fuse.js": "^7.1.0",
