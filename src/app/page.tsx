@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { BuildBarChart } from '@/components/builds/BuildBarChart'
 import { BuildPicker } from '@/components/builds/BuildPicker'
+import { ScrollButton } from '@/components/ScrollButton'
 
 export default function HomePage() {
   const structuredData = {
@@ -77,13 +78,12 @@ export default function HomePage() {
             Crafted by veteran martial-arts gamers, our comprehensive wiki helps you master combat, explore the vast open world, and optimize your character builds for the ultimate Wuxia experience.
           </p>
           <div className="flex gap-4">
-            <Link
-              href="/news/release-countdown/"
+            <ScrollButton
+              targetId="build-recommender"
               className="bg-[#F4B860] hover:bg-[#D99B3C] text-black font-bold py-3 px-6 rounded-md transition-colors"
-              aria-label="View Launch Countdown"
             >
               Launch Countdown
-            </Link>
+            </ScrollButton>
             <Link
               href="/builds/best-builds/"
               className="bg-white/90 hover:bg-white text-[#1E3A34] font-semibold py-3 px-6 rounded-md transition-colors"
@@ -142,7 +142,7 @@ export default function HomePage() {
       </section>
 
       {/* Build Picker Section */}
-      <section className="mb-16">
+      <section id="build-recommender" className="mb-16 scroll-mt-20">
         <h2 className="text-3xl font-bold text-center text-white mb-4">
           Quick Build Recommender
         </h2>

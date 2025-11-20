@@ -4,6 +4,10 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import matter from 'gray-matter'
 import { marked } from 'marked'
+import { ReadingProgress } from '@/components/ReadingProgress'
+import { TableOfContents } from '@/components/TableOfContents'
+import { RelatedArticles } from '@/components/RelatedArticles'
+import { ArticleCTA, FloatingCTA } from '@/components/ArticleCTA'
 
 interface PageProps {
   params: Promise<{
@@ -112,6 +116,10 @@ export default async function ContentPage({ params }: PageProps) {
     ]
   }
 
+  // Get category from slug for related articles
+  const category = slug[0] || 'guides'
+  const currentSlug = slug.join('/')
+
   return (
     <>
       <script
@@ -122,82 +130,104 @@ export default async function ContentPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
+
+      {/* Reading Progress Bar */}
+      <ReadingProgress />
+
       <div className="container mx-auto py-12 px-4">
-      <article className="max-w-4xl mx-auto">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-gray-400 mb-6">
-          <Link href="/" className="hover:text-[#F4B860]">Home</Link>
-          {slug.map((segment, index) => {
-            const isLast = index === slug.length - 1
-            const segmentPath = '/' + slug.slice(0, index + 1).join('/')
-            const displayText = segment.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+        {/* Two-column layout: Article + TOC */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 max-w-7xl mx-auto">
+          {/* Main Article Column */}
+          <article className="min-w-0">
+            {/* Breadcrumb */}
+            <nav className="text-sm text-gray-400 mb-6">
+              <Link href="/" className="hover:text-[#F4B860]">Home</Link>
+              {slug.map((segment, index) => {
+                const isLast = index === slug.length - 1
+                const segmentPath = '/' + slug.slice(0, index + 1).join('/')
+                const displayText = segment.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
 
-            return (
-              <span key={index}>
-                {' › '}
-                {isLast ? (
-                  <span className="text-white">{displayText}</span>
-                ) : (
-                  <Link href={segmentPath} className="hover:text-[#F4B860]">
-                    {displayText}
-                  </Link>
+                return (
+                  <span key={index}>
+                    {' › '}
+                    {isLast ? (
+                      <span className="text-white">{displayText}</span>
+                    ) : (
+                      <Link href={segmentPath} className="hover:text-[#F4B860]">
+                        {displayText}
+                      </Link>
+                    )}
+                  </span>
+                )
+              })}
+            </nav>
+
+            {/* Article Header */}
+            <header className="mb-8">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="bg-[#F4B860]/20 text-[#F4B860] px-3 py-1 rounded-full text-sm">
+                  {frontmatter.category || 'Guide'}
+                </span>
+                {frontmatter.priority && frontmatter.priority <= 10 && (
+                  <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">
+                    High Priority
+                  </span>
                 )}
-              </span>
-            )
-          })}
-        </nav>
+              </div>
+              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+                {frontmatter.title}
+              </h1>
+              {frontmatter.description && (
+                <p className="text-xl text-gray-300">
+                  {frontmatter.description}
+                </p>
+              )}
+              {frontmatter.date && (
+                <p className="text-sm text-gray-400 mt-4">
+                  Last updated: {frontmatter.date}
+                </p>
+              )}
+            </header>
 
-        {/* Article Header */}
-        <header className="mb-8">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="bg-[#F4B860]/20 text-[#F4B860] px-3 py-1 rounded-full text-sm">
-              {frontmatter.category || 'Guide'}
-            </span>
-            {frontmatter.priority && frontmatter.priority <= 10 && (
-              <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">
-                High Priority
-              </span>
+            {/* Article Content */}
+            <div className="prose prose-invert prose-lg max-w-none">
+              <div
+                className="text-gray-300 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: htmlContent }}
+              />
+            </div>
+
+            {/* External Reference */}
+            {frontmatter.reference && (
+              <div className="mt-12 p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700">
+                <h3 className="text-lg font-semibold text-white mb-2">External Reference</h3>
+                <a
+                  href={frontmatter.reference}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#F4B860] hover:underline"
+                >
+                  {frontmatter.reference}
+                </a>
+              </div>
             )}
-          </div>
-          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-            {frontmatter.title}
-          </h1>
-          {frontmatter.description && (
-            <p className="text-xl text-gray-300">
-              {frontmatter.description}
-            </p>
-          )}
-          {frontmatter.date && (
-            <p className="text-sm text-gray-400 mt-4">
-              Last updated: {frontmatter.date}
-            </p>
-          )}
-        </header>
 
-        {/* Article Content */}
-        <div className="prose prose-invert prose-lg max-w-none">
-          <div
-            className="text-gray-300 leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: htmlContent }}
-          />
+            {/* Related Articles */}
+            <RelatedArticles category={category} currentSlug={currentSlug} />
+
+            {/* Newsletter CTA */}
+            <ArticleCTA />
+          </article>
+
+          {/* Table of Contents Sidebar */}
+          <aside>
+            <TableOfContents />
+          </aside>
         </div>
+      </div>
 
-        {/* External Reference */}
-        {frontmatter.reference && (
-          <div className="mt-12 p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700">
-            <h3 className="text-lg font-semibold text-white mb-2">External Reference</h3>
-            <a
-              href={frontmatter.reference}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#F4B860] hover:underline"
-            >
-              {frontmatter.reference}
-            </a>
-          </div>
-        )}
-      </article>
-    </div>
+      {/* Floating CTA Button */}
+      <FloatingCTA />
     </>
   )
 }
