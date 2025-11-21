@@ -10,40 +10,64 @@ export function Header() {
               Where Winds Meet
             </span>
           </Link>
-          <nav className="hidden md:flex gap-6">
+          <nav className="hidden lg:flex gap-4 text-sm">
             <Link
               href="/builds/"
-              className="text-gray-200 hover:text-[#F4B860] transition-colors px-3 py-2"
+              className="text-gray-200 hover:text-[#F4B860] transition-colors px-2 py-2"
             >
               Builds
             </Link>
             <Link
               href="/bosses/"
-              className="text-gray-200 hover:text-[#F4B860] transition-colors px-3 py-2"
+              className="text-gray-200 hover:text-[#F4B860] transition-colors px-2 py-2"
             >
               Bosses
             </Link>
             <Link
               href="/guides/"
-              className="text-gray-200 hover:text-[#F4B860] transition-colors px-3 py-2"
+              className="text-gray-200 hover:text-[#F4B860] transition-colors px-2 py-2"
             >
               Guides
             </Link>
             <Link
+              href="/quests/"
+              className="text-gray-200 hover:text-[#F4B860] transition-colors px-2 py-2"
+            >
+              Quests
+            </Link>
+            <Link
+              href="/collectibles/"
+              className="text-gray-200 hover:text-[#F4B860] transition-colors px-2 py-2"
+            >
+              Collectibles
+            </Link>
+            <Link
+              href="/lore/"
+              className="text-gray-200 hover:text-[#F4B860] transition-colors px-2 py-2"
+            >
+              Lore
+            </Link>
+            <Link
               href="/news/"
-              className="text-gray-200 hover:text-[#F4B860] transition-colors px-3 py-2"
+              className="text-gray-200 hover:text-[#F4B860] transition-colors px-2 py-2"
             >
               News
             </Link>
             <Link
               href="/pc/"
-              className="text-gray-200 hover:text-[#F4B860] transition-colors px-3 py-2"
+              className="text-gray-200 hover:text-[#F4B860] transition-colors px-2 py-2"
             >
               PC
             </Link>
             <Link
+              href="/console/"
+              className="text-gray-200 hover:text-[#F4B860] transition-colors px-2 py-2"
+            >
+              Console
+            </Link>
+            <Link
               href="/system/"
-              className="text-gray-200 hover:text-[#F4B860] transition-colors px-3 py-2"
+              className="text-gray-200 hover:text-[#F4B860] transition-colors px-2 py-2"
             >
               System
             </Link>

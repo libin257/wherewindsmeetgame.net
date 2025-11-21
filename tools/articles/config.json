@@ -1,0 +1,162 @@
+{
+  "api_key": "sk-sREYhQ74frwVYjN7E0fQVl26cuSKTJ6KHunw7jMJUypYbQNn",
+  "api_base_url": "https://api.apicore.ai/v1/chat/completions",
+  "model": "gpt-4o",
+  "temperature": 0.7,
+  "max_tokens": 4096,
+  "concurrent_limit": 100,
+  "retry_attempts": 3,
+  "retry_delay": 2,
+  "excel_file": "tools/articles/内页.xlsx",
+  "output_dir": "src/content/",
+  "site_domain": "https://wherewindsmeetgame.net",
+  "internal_links": {
+    "bosses": [
+      "/bosses/azure-dragon/",
+      "/bosses/black-lotus/",
+      "/bosses/blazing-oni/",
+      "/bosses/crimson-general/",
+      "/bosses/desert-king/",
+      "/bosses/frost-yaksha/",
+      "/bosses/ghost-blade/",
+      "/bosses/golden-cicada/",
+      "/bosses/iron-lion/",
+      "/bosses/scarlet-maiden/",
+      "/bosses/sea-serpent/",
+      "/bosses/shadow-assassin/",
+      "/bosses/silver-phoenix/",
+      "/bosses/stone-guardian/",
+      "/bosses/thunder-monk/",
+      "/bosses/emperor's-shadow/",
+      "/bosses/jiang-yue/",
+      "/bosses/qianye/",
+      "/bosses/white-wolf/"
+    ],
+    "collectibles": [
+      "/collectibles/ancient-scrolls/",
+      "/collectibles/hidden-lotus/",
+      "/collectibles/jade-figurines/",
+      "/collectibles/legendary-carp/",
+      "/collectibles/spirit-orbs/"
+    ],
+    "community": [
+      "/community/guilds/",
+      "/community/mods/",
+      "/community/discord/"
+    ],
+    "console": [
+      "/console/ps5-performance/"
+    ],
+    "guides": [
+      "/guides/achievements/",
+      "/guides/cooking/",
+      "/guides/co-op/",
+      "/guides/fishing/",
+      "/guides/housing/",
+      "/guides/mounts/",
+      "/guides/pets/",
+      "/guides/photo-mode/",
+      "/guides/pvp/",
+      "/guides/trophies/",
+      "/guides/ai-npc/",
+      "/guides/crafting/",
+      "/guides/fast-travel/",
+      "/guides/stealth/",
+      "/guides/weapon-tier-list/",
+      "/guides/class-overview/",
+      "/guides/parry-guide/",
+      "/guides/weapons-guide/",
+      "/guides/world-map/"
+    ],
+    "lore": [
+      "/lore/easter-eggs/",
+      "/lore/factions/",
+      "/lore/story-summary/"
+    ],
+    "media": [
+      "/media/soundtrack/",
+      "/media/gameplay-trailer/"
+    ],
+    "news": [
+      "/news/known-issues/",
+      "/news/mobile-port/",
+      "/news/patch-notes/",
+      "/news/xbox-release/",
+      "/news/beta-signup/",
+      "/news/price/",
+      "/news/release-date/"
+    ],
+    "pc": [
+      "/pc/dlss/",
+      "/pc/steam-deck/",
+      "/pc/trainer/",
+      "/pc/benchmark-test/",
+      "/pc/fps-cap/",
+      "/pc/ultrawide-support/",
+      "/pc/performance-settings/"
+    ],
+    "quests": [
+      "/quests/bandit-camp/",
+      "/quests/chapter-10-quest-guide/",
+      "/quests/chapter-1-quest-guide/",
+      "/quests/chapter-2-quest-guide/",
+      "/quests/chapter-3-quest-guide/",
+      "/quests/chapter-4-quest-guide/",
+      "/quests/chapter-5-quest-guide/",
+      "/quests/chapter-6-quest-guide/",
+      "/quests/chapter-7-quest-guide/",
+      "/quests/chapter-8-quest-guide/",
+      "/quests/chapter-9-quest-guide/",
+      "/quests/dragon-statue/",
+      "/quests/hidden-hermit/",
+      "/quests/lost-scholar/",
+      "/quests/lotus-pond/"
+    ],
+    "store": [
+      "/store/cosmetics/",
+      "/store/dlc/",
+      "/store/collectors-edition/",
+      "/store/deluxe-edition/",
+      "/store/preorder-bonus/"
+    ],
+    "system": [
+      "/system/controller-support/",
+      "/system/language-support/",
+      "/system/controller-mapping/",
+      "/system/crossplay/",
+      "/system/server-status/",
+      "/system/system-requirements/"
+    ],
+    "builds": [
+      "/builds/blade-build/",
+      "/builds/dual-blades-build/",
+      "/builds/iron-flute-build/",
+      "/builds/long-spear-build/",
+      "/builds/meteor-hammer-build/",
+      "/builds/nameless-sword-build/",
+      "/builds/panacea-fan-build/",
+      "/builds/stormbreaker-spear-build/",
+      "/builds/best-builds/"
+    ],
+    "support": [
+      "/support/refund-policy/"
+    ]
+  },
+  "external_authorities": [
+    "https://store.steampowered.com/",
+    "https://www.epicgames.com/",
+    "https://www.ign.com/",
+    "https://www.gamespot.com/",
+    "https://www.pcgamer.com/",
+    "https://www.polygon.com/",
+    "https://www.gamesradar.com/",
+    "https://www.rockpapershotgun.com/",
+    "https://www.youtube.com/",
+    "https://twitter.com/",
+    "https://www.reddit.com/r/gaming/",
+    "https://en.wikipedia.org/wiki/Action_role-playing_game",
+    "https://www.eurogamer.net/",
+    "https://kotaku.com/",
+    "https://www.destructoid.com/"
+  ]
+}
