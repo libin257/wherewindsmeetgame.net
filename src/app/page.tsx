@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { BuildBarChart } from '@/components/builds/BuildBarChart'
 import { BuildPicker } from '@/components/builds/BuildPicker'
 import { ScrollButton } from '@/components/ScrollButton'
+import { AdBanner } from '@/components/ads/AdBanner'
+import { AdBannerInvoke } from '@/components/ads/AdBannerInvoke'
 
 export default function HomePage() {
   const structuredData = {
@@ -62,6 +64,11 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="container mx-auto py-12">
+      {/* Top Banner Ad - Desktop Only */}
+      <div className="hidden lg:flex justify-center mb-8">
+        <AdBanner type="banner-728x90" />
+      </div>
+
       {/* Hero Section */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
         <div className="flex flex-col justify-center">
@@ -127,6 +134,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Native Banner Ad */}
+      <div className="flex justify-center mb-16">
+        <AdBannerInvoke />
+      </div>
+
       {/* Build Finder Section */}
       <section className="mb-16">
         <h2 className="text-3xl font-bold text-center text-white mb-4">
@@ -154,6 +166,11 @@ export default function HomePage() {
         </p>
         <BuildPicker />
       </section>
+
+      {/* Mid-page Banner Ad */}
+      <div className="flex justify-center mb-16">
+        <AdBanner type="banner-300x250" />
+      </div>
 
       {/* Key Features */}
       <section className="mb-16">

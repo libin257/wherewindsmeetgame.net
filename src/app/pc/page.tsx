@@ -3,6 +3,7 @@ import { Breadcrumb } from '@/components/Breadcrumb'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import matter from 'gray-matter'
+import { AdBanner } from '@/components/ads/AdBanner'
 
 interface Article {
   slug: string
@@ -101,6 +102,11 @@ export default async function PCPage() {
           ))}
         </div>
       </section>
+
+      {/* Banner Ad */}
+      <div className="flex justify-center mt-8">
+        <AdBanner type="banner-300x250" />
+      </div>
     </div>
   )
 }

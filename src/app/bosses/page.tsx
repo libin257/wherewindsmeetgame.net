@@ -3,6 +3,7 @@ import { Breadcrumb } from '@/components/Breadcrumb'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import matter from 'gray-matter'
+import { AdBanner } from '@/components/ads/AdBanner'
 
 interface Article {
   slug: string
@@ -69,6 +70,11 @@ export default async function BossesPage() {
         <h2 className="mx-auto max-w-[700px] md:text-xl my-6 text-gray-200 drop-shadow-md">
           Strategies, weaknesses, and rewards for every boss encounter in Where Winds Meet
         </h2>
+      </div>
+
+      {/* Banner Ad */}
+      <div className="flex justify-center mb-8">
+        <AdBanner type="banner-468x60" />
       </div>
 
       <section>

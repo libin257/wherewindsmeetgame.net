@@ -8,6 +8,8 @@ import { ReadingProgress } from '@/components/ReadingProgress'
 import { TableOfContents } from '@/components/TableOfContents'
 import { RelatedArticles } from '@/components/RelatedArticles'
 import { ArticleCTA, FloatingCTA } from '@/components/ArticleCTA'
+import { AdBannerInvoke } from '@/components/ads/AdBannerInvoke'
+import { AdBanner } from '@/components/ads/AdBanner'
 
 interface PageProps {
   params: Promise<{
@@ -162,6 +164,11 @@ export default async function ContentPage({ params }: PageProps) {
               })}
             </nav>
 
+            {/* Top Banner Ad */}
+            <div className="flex justify-center mb-8">
+              <AdBannerInvoke />
+            </div>
+
             {/* Article Header */}
             <header className="mb-8">
               <div className="flex items-center gap-3 mb-4">
@@ -195,6 +202,11 @@ export default async function ContentPage({ params }: PageProps) {
                 className="text-gray-300 leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: htmlContent }}
               />
+            </div>
+
+            {/* Bottom Banner Ad */}
+            <div className="flex justify-center my-12">
+              <AdBanner type="banner-468x60" />
             </div>
 
             {/* External Reference */}

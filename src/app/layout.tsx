@@ -110,6 +110,12 @@ export default function RootLayout({
           </Script>
         )}
 
+        {/* Preconnect for ads */}
+        <link rel="preconnect" href="//www.highperformanceformat.com" />
+        <link rel="preconnect" href="//pl28123603.effectivegatecpm.com" />
+        <link rel="dns-prefetch" href="//www.highperformanceformat.com" />
+        <link rel="dns-prefetch" href="//pl28123603.effectivegatecpm.com" />
+
         <Script
           crossOrigin="anonymous"
           src="//unpkg.com/same-runtime/dist/index.global.js"
