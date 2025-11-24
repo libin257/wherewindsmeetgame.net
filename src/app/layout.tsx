@@ -110,7 +110,18 @@ export default function RootLayout({
           </Script>
         )}
 
-        {/* Preconnect for ads */}
+        {/* Performance: Preconnect & DNS Prefetch */}
+        {/* Analytics & Tracking */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.clarity.ms" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.clarity.ms" />
+
+        {/* Google Fonts (if used) */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* Ads */}
         <link rel="preconnect" href="//www.highperformanceformat.com" />
         <link rel="preconnect" href="//pl28123603.effectivegatecpm.com" />
         <link rel="dns-prefetch" href="//www.highperformanceformat.com" />
@@ -125,7 +136,7 @@ export default function RootLayout({
         <ClientBody>
           <div
             className="relative min-h-screen bg-cover bg-center bg-fixed"
-            style={{ backgroundImage: 'url(/images/backgrounds/winter-night.png)' }}
+            style={{ backgroundImage: 'url(/images/backgrounds/winter-night.webp)' }}
           >
             <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
             <div className="relative z-10 flex flex-col min-h-screen">
